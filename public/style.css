@@ -1,0 +1,255 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+
+/* Fonts */
+
+@font-face {
+    font-family: 'HVDPosterRegular';
+    src: url('HVD_Poster-webfont.eot');
+    src: url('HVD_Poster-webfont.eot?#iefix') format('embedded-opentype'),
+         url('HVD_Poster-webfont.woff') format('woff'),
+         url('HVD_Poster-webfont.ttf') format('truetype'),
+         url('HVD_Poster-webfont.svg#HVDPosterRegular') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+/* margins */
+
+.margin50 {
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+/* Clear */
+
+.cf:before, .cf:after{
+    content:"";
+    display:table;
+}
+ 
+.cf:after{
+    clear:both;
+}
+ 
+.cf{
+    zoom:1;
+}    
+
+/* Form */
+
+.formBackground {
+
+  background:#fff;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  -ms-border-radius:10px;
+  -o-border-radius:10px;
+  border-radius: 10px;
+
+  -o-box-shadow: 0px 5px 5px 5px #ccc;
+  -moz-box-shadow: 0px 5px 5px 5px #ccc;
+  -webkit-box-shadow:0px 5px 5px 5px #ccc;
+  -ms-box-shadow: 0px 5px 5px 5px #ccc;
+  box-shadow: 0px 5px 5px 5px #ccc;
+
+  position:relative;
+  height:auto;
+}
+
+.formBackground input[type=text] {
+    display:block;
+    margin:20px auto;
+    width: 80%;
+    height: 20px;
+    padding: 10px 5px;   
+    font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    background: #eee;
+    border-radius: 3px 0 0 3px;   
+}
+
+.formBackground input[type=text]:focus{
+  outline: 0;
+  background: #fff;
+  -moz-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+  -webkit-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+  -o-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+  -ms-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+  box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+
+.formBackground input[type=text]::-webkit-input-placeholder {
+  color: #555;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.formBackground h1 {
+  font-family:'HVDPosterRegular';
+  font-weight:normal;
+  text-align:center;
+}
+
+.formBackground h3 {
+  font-family:'HVDPosterRegular';
+  font-weight:normal;
+  text-align:center;
+}
+
+/* Label Tags */
+
+.labelTag{
+   text-align:center;
+   font-family:'HVDPosterRegular';
+  
+}
+
+
+
+/* Submit Button */
+
+.formBackground input[type=submit], .backButton {
+    overflow: visible;
+    position: relative;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 50px;
+    width: 60%;
+    font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    color: #fff;
+    text-transform: uppercase;
+    background: #d83c3c;
+    border-radius: 5px;     
+    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+    display:block;
+    margin:10px auto;
+    text-align: center;
+
+}
+
+.backButton:hover {
+  color:white;
+}
+
+.formBackground input[type=submit]:hover {
+  background: #e54040;
+} 
+
+.formBackground input[type=submit]:active, .formBackground input[type=submit]:active {
+    background: #c42f2f;
+    outline: 0;
+} 
+
+.formBackground input[type=submit]:before { /* left arrow */
+  content: '';
+  position: absolute;
+  -moz-border-width: 8px 8px 8px 0;
+  -webkit-border-width: 8px 8px 8px 0;
+  -o-border-width: 8px 8px 8px 0;
+  -ms-border-width: 8px 8px 8px 0;
+  border-width: 8px 8px 8px 0;
+
+  -moz-border-style: solid solid solid none;
+  -o-border-style: solid solid solid none;
+  -webkit-border-style: solid solid solid none;
+  -ms-border-style: solid solid solid none;
+  border-style: solid solid solid none;
+
+  -moz-border-color: transparent #d83c3c transparent;
+  -webkit-border-color: transparent #d83c3c transparent;
+  -ms-border-color: transparent #d83c3c transparent;
+  -o-border-color: transparent #d83c3c transparent;
+  border-color: transparent #d83c3c transparent;
+
+  top: 12px;
+  left: -6px;
+
+}
+
+.formBackground input[type=submit]:hover:before {
+  -moz-border-right-color: #e54040;
+  -webkit-border-right-color: #e54040;
+  -o-border-right-color: #e54040;
+  -ms-border-right-color: #e54040;
+   border-right-color: #e54040;
+}
+
+.formBackground input[type=submit]:focus:before, .formBackground input[type=submit]:active:before {
+  -moz-border-right-color: #c42f2f;
+  -o-border-right-color: #c42f2f;
+  -webkit-border-right-color: #c42f2f;
+  -ms-border-right-color: #c42f2f;
+  border-right-color: #c42f2f;
+}
+
+.formBackground input[type=submit]::-moz-focus-inner {
+  border:0;
+  padding:0;
+}
+
+
+/* Results */
+
+
+.resultTitle {
+  font-family:'HVDPosterRegular';
+  font-size:3em;
+  text-align:center;
+}
+
+.releaseDate {
+  font-family:'HVDPosterRegular';
+  font-size:2em;
+  text-align:center;
+
+}
+
+
+.poster {
+
+}
+
+.pagination {
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+  font-family:'HVDPosterRegular';
+  font-size:1.4em;
+}
+
+
+/* Footer */
+
+footer {
+  text-align: center;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0px 0px 10px 0px;
+}
+
+footer ul li a {
+  font-family: 'HVDPosterRegular';
+  text-align: center;
+}
+
+footer ul li a:hover {
+  text-decoration: none;
+}
+
+ 
+

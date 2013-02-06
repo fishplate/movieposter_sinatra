@@ -1,0 +1,101 @@
+@import "twitter/bootstrap/bootstrap";
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings");
+@iconWhiteSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings-white");
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+// Note: If you use asset_path() here, your compiled bootstrap_and_overrides.css will not
+//       have the proper paths. So for now we use the absolute path.
+@fontAwesomeEotPath: asset-path("fontawesome-webfont.eot");
+@fontAwesomeEotPath_iefix: asset-path("fontawesome-webfont.eot#iefix");
+@fontAwesomeWoffPath: asset-path("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: asset-path("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: asset-path("fontawesome-webfont.svg");
+
+// Font Awesome
+@import "fontawesome";
+
+// Glyphicons
+//@import "twitter/bootstrap/sprites.less";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
+
+body {
+  
+  background:url("/assets/bg.jpg");
+}
+
+.thumbnail {
+    border: none;
+    border-radius: none;
+    box-shadow:  none;
+    display: block;
+    line-height: 20px;
+    padding: 4px;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color: #555;
+}
+
+// Will_paginate
+
+.pagination ul > li:first-child > a, .pagination ul > li:first-child > span {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom-left-radius: 4px;
+    border-left-width: 1px;
+    border-top-left-radius: 4px;
+}
+
+.pagination ul > li.prev > a:hover {
+  background-color:#F5F5F5;
+}
+
+.pagination ul > .disabled > span, .pagination ul > .disabled > a, .pagination ul > .disabled > a:hover {
+    background-color: transparent;
+    color: #0088CC;
+    cursor: default;
+}
+
+label {
+display:inline-block;
+font-size:1.4em;
+}
+
+#movieTag, #albumTag {
+    
+}
+
+input[type="radio"], input[type="checkbox"] {
+    line-height: normal;
+    margin: 0px;
+}
+
+
+// Media Queries
+
+@media all and (max-width: 720px) {
+
+.pagination ul > li {
+ display:none;
+
+}
+
+.pagination ul > li.active, .pagination ul > li.prev, .pagination ul > li.next {
+  display:inline;
+}
+
+
+}
