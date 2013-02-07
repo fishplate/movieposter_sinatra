@@ -10,3 +10,5 @@ gem 'will_paginate-bootstrap'
 
 # easier than messing with date stuff
 gem 'activesupport'
+
+gem 'heroku'
