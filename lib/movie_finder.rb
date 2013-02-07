@@ -10,12 +10,14 @@ API_KEY = ENV["API_KEY"] || "nokey"
 
   def movie_search(query)
     query = URI::encode(query)
+    headers = { 'Content-Type' => 'application/json', 'Accept' => 'application/json' }
     response = HTTParty.get(MOVIE_URL + API_KEY + "&query=#{query}", :headers => headers)
     results = JSON.parse(response.body)["results"]
     clean_up(results)
   end
 
   def image_config_settings
+    headers = { 'Content-Type' => 'application/json', 'Accept' => 'application/json' }
     response = HTTParty.get(CONFIG_URL + API_KEY, :headers => headers)
     results = JSON.parse(response.body)["images"]
     {
@@ -35,10 +37,6 @@ private
         "release_date" => r["release_date"]
       }
     end
-  end
-
-  def headers
-    { 'Content-Type' => 'application/json', 'Accept' => 'application/json' }
   end
 
 end
