@@ -1,0 +1,23 @@
+<div class="container margin50">
+  <div class="row">
+    <div class="span8 offset2">
+      <% if @results.empty? %>
+        <h1 class="resultTitle">sorry we can't find anything for that movie.</h1>
+        <a href="/" class ='backButton'> Back To Search</a>
+      <% end %>
+
+      <% @results.each do |r| %>
+        <h1 class="resultTitle"><%= r["title"] %></h1>
+        <% if r["release_date"] %>
+          <h3 class="releaseDate">Released: <%= date_format(r["release_date"]) %></h3>
+        <% end %>
+
+        <div class="thumbnail">
+        <img class="poster" src=<%= @image + r["image"] %>/>
+        <%= will_paginate @results, :previous_label => "&laquo; Prev", :next_label => "Next &raquo;", :inner_window => 1, :outer_window => 1, :renderer => BootstrapPagination::Sinatra %>
+        </div>
+        <a href="/" class ='backButton'> Back To Search</a>
+      <% end %>
+    </div>
+  </div>
+</div>
